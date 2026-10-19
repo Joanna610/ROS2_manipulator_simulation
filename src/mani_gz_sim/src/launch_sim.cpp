@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <signal.h>
 
 #include <ament_index_cpp/get_package_share_directory.hpp>
 
@@ -24,7 +25,6 @@ pid_t launch_process(const std::vector<std::string>& args)
 
     if (pid == 0)
     {
-        // Prepare arguments for execvp().
         std::vector<char*> argv;
 
         for (const auto& arg : args)
@@ -36,7 +36,6 @@ pid_t launch_process(const std::vector<std::string>& args)
 
         execvp(argv[0], argv.data());
 
-        // Reached only if execvp fails.
         perror("execvp failed");
         _exit(127);
     }
@@ -46,17 +45,11 @@ pid_t launch_process(const std::vector<std::string>& args)
 
 int main(int argc, char* argv[])
 {
-    // --------------------------------------------------
-    // 1. Set the Qt environment variable.
-    // --------------------------------------------------
-
+    // 1. Configure Qt.
     setenv("QT_QPA_PLATFORM", "xcb", 1);
 
+    // 2. Locate the package.
     const std::string package_name = "mani_gz_sim";
-
-    // --------------------------------------------------
-    // 2. Get package paths.
-    // --------------------------------------------------
 
     std::string package_share;
 
@@ -75,134 +68,61 @@ int main(int argc, char* argv[])
         return 1;
     }
 
+    // 3. Set the default world.
     const std::string default_world =
         (fs::path(package_share) /
-         "worlds" /
+         "world" /
          "world.world").string();
 
-    const std::string bridge_config =
-        (fs::path(package_share) /
-         "config" /
-         "ros_gz_bridge.yaml").string();
-
-    // --------------------------------------------------
-    // 3. Read the world argument.
-    //
-    // Usage:
-    // ./launch_sim
-    // ./launch_sim /path/to/world.sdf
-    // --------------------------------------------------
-
+    // 4. Allow a custom world path.
     const std::string world =
         (argc > 1) ? argv[1] : default_world;
 
-    // --------------------------------------------------
-    // 4. Start the robot state publisher.
-    // --------------------------------------------------
-
-    pid_t rsp_pid = launch_process({
-        "ros2",
-        "launch",
-        package_name,
-        "rsp_launch.cpp",
-        "use_sim_time:=true"
-    });
-
-    if (rsp_pid < 0)
+    // 5. Check that the world file exists.
+    if (!fs::exists(world))
     {
+        std::cerr << "World file not found: "
+                  << world << '\n';
+
         return 1;
     }
 
-    // --------------------------------------------------
-    // 5. Start Gazebo Sim.
-    // --------------------------------------------------
-
+    // 6. Start Gazebo Sim with the selected world.
     pid_t gazebo_pid = launch_process({
-        "ros2",
-        "launch",
-        "mani_gz_sim",
-        "gz_sim.launch.py",
-        "gz_args:=-r -v4 " + world,
-        "on_exit_shutdown:=true"
+        "gz",
+        "sim",
+        "-r",
+        "-v4",
+        world
     });
 
     if (gazebo_pid < 0)
     {
-        kill(rsp_pid, SIGTERM);
+        std::cerr << "Failed to start Gazebo.\n";
         return 1;
     }
 
-    // --------------------------------------------------
-    // 6. Spawn the robot.
-    // --------------------------------------------------
-
-    pid_t spawn_pid = launch_process({
-        "ros2",
-        "run",
-        "ros_gz_sim",
-        "create",
-        "-topic",
-        "robot_description",
-        "-name",
-        "my_bot",
-        "-z",
-        "0.1"
-    });
-
-    if (spawn_pid < 0)
-    {
-        kill(rsp_pid, SIGTERM);
-        kill(gazebo_pid, SIGTERM);
-        return 1;
-    }
-
-    // --------------------------------------------------
-    // 7. Start the ROS-Gazebo bridge.
-    // --------------------------------------------------
-
-    pid_t bridge_pid = launch_process({
-        "ros2",
-        "run",
-        "ros_gz_bridge",
-        "parameter_bridge",
-        "--ros-args",
-        "-p",
-        "config_file:=" + bridge_config
-    });
-
-    if (bridge_pid < 0)
-    {
-        kill(rsp_pid, SIGTERM);
-        kill(gazebo_pid, SIGTERM);
-        kill(spawn_pid, SIGTERM);
-        return 1;
-    }
-
-    std::cout << "ROS 2 and Gazebo processes started.\n";
+    std::cout << "Gazebo Sim started.\n";
     std::cout << "World: " << world << '\n';
+    std::cout << "No robot will be spawned.\n";
 
-    // --------------------------------------------------
-    // 8. Keep the launcher alive.
-    // --------------------------------------------------
-
-    // Wait for the first child process to exit.
+    // 7. Wait for Gazebo to exit.
     int status = 0;
-    pid_t finished_pid = wait(&status);
 
-    std::cout << "Process " << finished_pid
-              << " exited.\n";
+    while (waitpid(gazebo_pid, &status, 0) == -1)
+    {
+        if (errno == EINTR)
+        {
+            continue;
+        }
 
-    // Terminate the remaining child processes.
-    kill(rsp_pid, SIGTERM);
-    kill(gazebo_pid, SIGTERM);
-    kill(spawn_pid, SIGTERM);
-    kill(bridge_pid, SIGTERM);
+        perror("waitpid failed");
+        return 1;
+    }
 
-    // Reap the remaining children.
-    waitpid(rsp_pid, nullptr, 0);
-    waitpid(gazebo_pid, nullptr, 0);
-    waitpid(spawn_pid, nullptr, 0);
-    waitpid(bridge_pid, nullptr, 0);
+    std::cout << "Gazebo has closed.\n";
 
-    return 0;
+    return WIFEXITED(status)
+        ? WEXITSTATUS(status)
+        : 1;
 }

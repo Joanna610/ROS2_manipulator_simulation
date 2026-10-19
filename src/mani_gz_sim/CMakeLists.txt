@@ -18,19 +18,9 @@ ament_target_dependencies(launch_sim
   ament_index_cpp
 )
 
+
 install(
   TARGETS launch_sim
-  DESTINATION lib/${PROJECT_NAME}
-)
-
-add_executable(rsp_launch src/rsp_launch.cpp)
-
-ament_target_dependencies(rsp_launch
-  ament_index_cpp
-)
-
-install(
-  TARGETS rsp_launch
   DESTINATION lib/${PROJECT_NAME}
 )
 

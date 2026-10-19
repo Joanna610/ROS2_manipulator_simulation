@@ -1,0 +1,1 @@
+/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/ament_cmake_core/mani_gz_simConfig-version.cmake

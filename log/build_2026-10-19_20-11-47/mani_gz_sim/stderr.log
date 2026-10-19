@@ -1,0 +1,6 @@
+[31mCMake Error at cmake_install.cmake:46 (file):
+  file INSTALL cannot find
+  "/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim/config":
+  No such file or directory.
+
+[0m

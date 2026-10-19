@@ -66,12 +66,6 @@
         </visual>
       </link>
     </model>
-
-    <include>
-      <uri>model://home/joanna/ros2_gz_sim/install/ros_gazebo_simulation/share/ros_gazebo_simulation/worlds/model.sdf</uri>
-    </include>
-
-
   </world>
 </sdf>
 
