@@ -138,6 +138,7 @@ int main(int argc, char* argv[])
                 throw std::runtime_error("Failed to process Xacro");
         
         std::cout << "Spawning robot in Gazebo...\n";
+        
 
         pid_t spawn_pid = launch_process({
             "ros2",
