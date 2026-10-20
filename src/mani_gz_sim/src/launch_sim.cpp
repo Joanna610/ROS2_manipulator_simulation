@@ -33,10 +33,8 @@ pid_t launch_process(const std::vector<std::string>& args)
         std::vector<char*> argv;
 
         for (const auto& arg : args)
-        {
-            argv.push_back(
-                const_cast<char*>(arg.c_str()));
-        }
+            argv.push_back(const_cast<char*>(arg.c_str()));
+        
 
         argv.push_back(nullptr);
 
@@ -57,18 +55,14 @@ int wait_for_process(pid_t pid)
     while (waitpid(pid, &status, 0) == -1)
     {
         if (errno == EINTR)
-        {
             continue;
-        }
-
+        
         perror("waitpid failed");
         return -1;
     }
 
     if (WIFEXITED(status))
-    {
         return WEXITSTATUS(status);
-    }
 
     return 1;
 }
@@ -81,10 +75,6 @@ int main(int argc, char* argv[])
 
     try
     {
-        // --------------------------------------------
-        // 1. Locate package files.
-        // --------------------------------------------
-
         const std::string package_share =
             ament_index_cpp::get_package_share_directory(
                 package_name);
@@ -117,10 +107,6 @@ int main(int argc, char* argv[])
         std::cout << "World: " << world << '\n';
         std::cout << "Robot: " << xacro_file << '\n';
 
-        // --------------------------------------------
-        // 2. Start Gazebo.
-        // --------------------------------------------
-
         std::cout << "Starting Gazebo Sim...\n";
 
         pid_t gazebo_pid = launch_process({
@@ -132,43 +118,26 @@ int main(int argc, char* argv[])
         });
 
         if (gazebo_pid < 0)
-        {
-            throw std::runtime_error(
-                "Failed to start Gazebo");
-        }
+            throw std::runtime_error("Failed to start Gazebo");
 
         // Give Gazebo time to initialize.
-        std::this_thread::sleep_for(
-            std::chrono::seconds(5));
-
-        // --------------------------------------------
-        // 3. Process Xacro into URDF.
-        // --------------------------------------------
+        std::this_thread::sleep_for(std::chrono::seconds(1));
 
         std::cout << "Processing Xacro...\n";
 
-        const std::string urdf_file =
-            "/tmp/mani_gz_sim_robot.urdf";
+        const std::string urdf_file = "/tmp/mani_gz_sim_robot.urdf";
 
         const std::string xacro_command =
             "xacro \"" + xacro_file +
             "\" -o \"" + urdf_file + "\"";
 
-        const int xacro_status =
-            std::system(xacro_command.c_str());
+        const int xacro_status = std::system(xacro_command.c_str());
 
         if (xacro_status == -1 ||
             !WIFEXITED(xacro_status) ||
             WEXITSTATUS(xacro_status) != 0)
-        {
-            throw std::runtime_error(
-                "Failed to process Xacro");
-        }
-
-        // --------------------------------------------
-        // 4. Spawn robot in Gazebo.
-        // --------------------------------------------
-
+                throw std::runtime_error("Failed to process Xacro");
+        
         std::cout << "Spawning robot in Gazebo...\n";
 
         pid_t spawn_pid = launch_process({
@@ -189,11 +158,8 @@ int main(int argc, char* argv[])
         });
 
         if (spawn_pid < 0)
-        {
-            throw std::runtime_error(
-                "Failed to start robot spawning");
-        }
-
+            throw std::runtime_error("Failed to start robot spawning");
+        
         const int spawn_status =
             wait_for_process(spawn_pid);
 
