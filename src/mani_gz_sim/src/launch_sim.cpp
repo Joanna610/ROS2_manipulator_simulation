@@ -139,7 +139,6 @@ int main(int argc, char* argv[])
         
         std::cout << "Spawning robot in Gazebo...\n";
         
-
         pid_t spawn_pid = launch_process({
             "ros2",
             "run",
