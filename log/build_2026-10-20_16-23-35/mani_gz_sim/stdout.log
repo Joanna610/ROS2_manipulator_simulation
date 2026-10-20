@@ -1,0 +1,31 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/rsp_launch.dir/src/rsp_launch.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/launch_sim.dir/src/launch_sim.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable rsp_launch[0m
+[100%] [32m[1mLinking CXX executable launch_sim[0m
+[100%] Built target rsp_launch
+[100%] Built target launch_sim
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/lib/mani_gz_sim/launch_sim
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/lib/mani_gz_sim/rsp_launch
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/world/world.world
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/description/gazebo_control.xacro
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/description/inertial_macros.xacro
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/description/lidar.xacro
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/description/robot.urdf.xacro
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/description/robot_core.xacro
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/ament_index/resource_index/package_run_dependencies/mani_gz_sim
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/ament_index/resource_index/parent_prefix_path/mani_gz_sim
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/environment/path.sh
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/environment/path.dsv
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/local_setup.bash
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/local_setup.sh
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/local_setup.zsh
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/local_setup.dsv
+-- Symlinking: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/package.dsv
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/ament_index/resource_index/packages/mani_gz_sim
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/cmake/mani_gz_simConfig.cmake
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/cmake/mani_gz_simConfig-version.cmake
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/package.xml

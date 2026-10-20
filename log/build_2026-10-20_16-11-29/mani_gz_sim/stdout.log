@@ -1,0 +1,8 @@
+[ 75%] Built target launch_sim
+[ 75%] [32mBuilding CXX object CMakeFiles/rsp_launch.dir/src/rsp_launch.cpp.o[0m
+[100%] [32m[1mLinking CXX executable rsp_launch[0m
+[100%] Built target rsp_launch
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/lib/mani_gz_sim/launch_sim
+-- Symlinking: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/lib/mani_gz_sim/rsp_launch

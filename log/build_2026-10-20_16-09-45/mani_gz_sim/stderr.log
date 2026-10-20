@@ -1,0 +1,8 @@
+[01m[K/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim/src/rsp_launch.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim/src/rsp_launch.cpp:249:41:[m[K [01;31m[Kerror: [m[Kvariable ‘[01m[Kstd::ofstream file[m[K’ has initializer but incomplete type
+  249 |             std::ofstream file(urdf_file[01;31m[K)[m[K;
+      |                                         [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/rsp_launch.dir/build.make:76: CMakeFiles/rsp_launch.dir/src/rsp_launch.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/rsp_launch.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

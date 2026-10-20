@@ -1,0 +1,28 @@
+[0.014s] Invoking command in '/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim -- -j12 -l12
+[0.071s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.352s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.372s] -- Found ament_index_cpp: 1.8.1 (/opt/ros/jazzy/share/ament_index_cpp/cmake)
+[0.376s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.490s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.490s] -- Configured cppcheck include dirs: 
+[0.490s] -- Configured cppcheck exclude dirs and/or files: 
+[0.491s] -- Added test 'lint_cmake' to check CMake code style
+[0.493s] -- Added test 'uncrustify' to check C / C++ code style
+[0.494s] -- Configured uncrustify additional arguments: 
+[0.494s] -- Added test 'xmllint' to check XML markup files
+[0.496s] -- Configuring done (0.4s)
+[0.509s] -- Generating done (0.0s)
+[0.514s] -- Build files have been written to: /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim
+[0.570s] [ 25%] [32mBuilding CXX object CMakeFiles/launch_sim.dir/src/launch_sim.cpp.o[0m
+[0.570s] [ 50%] [32mBuilding CXX object CMakeFiles/rsp_launch.dir/src/rsp_launch.cpp.o[0m
+[0.895s] [01m[K/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim/src/rsp_launch.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[0.895s] [01m[K/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim/src/rsp_launch.cpp:249:41:[m[K [01;31m[Kerror: [m[Kvariable ‘[01m[Kstd::ofstream file[m[K’ has initializer but incomplete type
+[0.895s]   249 |             std::ofstream file(urdf_file[01;31m[K)[m[K;
+[0.895s]       |                                         [01;31m[K^[m[K
+[0.941s] gmake[2]: *** [CMakeFiles/rsp_launch.dir/build.make:76: CMakeFiles/rsp_launch.dir/src/rsp_launch.cpp.o] Error 1
+[0.942s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/rsp_launch.dir/all] Error 2
+[0.942s] gmake[1]: *** Waiting for unfinished jobs....
+[1.045s] [ 75%] [32m[1mLinking CXX executable launch_sim[0m
+[1.159s] [ 75%] Built target launch_sim
+[1.161s] gmake: *** [Makefile:146: all] Error 2
+[1.164s] Invoked command in '/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim -- -j12 -l12

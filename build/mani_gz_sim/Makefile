@@ -210,6 +210,19 @@ launch_sim/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/launch_sim.dir/build.make CMakeFiles/launch_sim.dir/build
 .PHONY : launch_sim/fast
 
+#=============================================================================
+# Target rules for targets named rsp_launch
+
+# Build rule for target.
+rsp_launch: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rsp_launch
+.PHONY : rsp_launch
+
+# fast build rule for target.
+rsp_launch/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rsp_launch.dir/build.make CMakeFiles/rsp_launch.dir/build
+.PHONY : rsp_launch/fast
+
 src/launch_sim.o: src/launch_sim.cpp.o
 .PHONY : src/launch_sim.o
 
@@ -234,6 +247,30 @@ src/launch_sim.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/launch_sim.dir/build.make CMakeFiles/launch_sim.dir/src/launch_sim.cpp.s
 .PHONY : src/launch_sim.cpp.s
 
+src/rsp_launch.o: src/rsp_launch.cpp.o
+.PHONY : src/rsp_launch.o
+
+# target to build an object file
+src/rsp_launch.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rsp_launch.dir/build.make CMakeFiles/rsp_launch.dir/src/rsp_launch.cpp.o
+.PHONY : src/rsp_launch.cpp.o
+
+src/rsp_launch.i: src/rsp_launch.cpp.i
+.PHONY : src/rsp_launch.i
+
+# target to preprocess a source file
+src/rsp_launch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rsp_launch.dir/build.make CMakeFiles/rsp_launch.dir/src/rsp_launch.cpp.i
+.PHONY : src/rsp_launch.cpp.i
+
+src/rsp_launch.s: src/rsp_launch.cpp.s
+.PHONY : src/rsp_launch.s
+
+# target to generate assembly for a file
+src/rsp_launch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rsp_launch.dir/build.make CMakeFiles/rsp_launch.dir/src/rsp_launch.cpp.s
+.PHONY : src/rsp_launch.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -250,9 +287,13 @@ help:
 	@echo "... mani_gz_sim_uninstall"
 	@echo "... uninstall"
 	@echo "... launch_sim"
+	@echo "... rsp_launch"
 	@echo "... src/launch_sim.o"
 	@echo "... src/launch_sim.i"
 	@echo "... src/launch_sim.s"
+	@echo "... src/rsp_launch.o"
+	@echo "... src/rsp_launch.i"
+	@echo "... src/rsp_launch.s"
 .PHONY : help
 
 
