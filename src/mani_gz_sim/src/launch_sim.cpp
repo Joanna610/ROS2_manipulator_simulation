@@ -89,8 +89,7 @@ int main(int argc, char* argv[])
              "description" /
              "robot.urdf.xacro").string();
 
-        const std::string world =
-            (argc > 1) ? argv[1] : default_world;
+        const std::string world = (argc > 1) ? argv[1] : default_world;
 
         if (!fs::exists(world))
         {
@@ -154,14 +153,13 @@ int main(int argc, char* argv[])
             "-y",
             "0",
             "-z",
-            "0.2"
+            "0"
         });
 
         if (spawn_pid < 0)
             throw std::runtime_error("Failed to start robot spawning");
         
-        const int spawn_status =
-            wait_for_process(spawn_pid);
+        const int spawn_status = wait_for_process(spawn_pid);
 
         if (spawn_status != 0)
         {
@@ -179,8 +177,7 @@ int main(int argc, char* argv[])
             << "Gazebo and robot are running. "
             << "Close Gazebo to exit.\n";
 
-        const int gazebo_status =
-            wait_for_process(gazebo_pid);
+        const int gazebo_status = wait_for_process(gazebo_pid);
 
         std::cout << "Gazebo has closed.\n";
 
