@@ -12,24 +12,10 @@ find_package(ament_cmake REQUIRED)
 # find_package(<dependency> REQUIRED)
 find_package(ament_index_cpp REQUIRED)
 
-add_executable(launch_sim src/launch_sim.cpp)
-ament_target_dependencies(launch_sim ament_index_cpp)
 
-add_executable(rsp_launch src/rsp_launch.cpp)
-ament_target_dependencies(rsp_launch ament_index_cpp)
 
 install(
-  TARGETS
-    launch_sim
-    rsp_launch
-  DESTINATION lib/${PROJECT_NAME}
-)
-
-# Install simulation resources
-install(
-  DIRECTORY
-    world
-    description
+  DIRECTORY launch config world description
   DESTINATION share/${PROJECT_NAME}
 )
 

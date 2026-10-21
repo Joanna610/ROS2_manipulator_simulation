@@ -1,0 +1,32 @@
+[0.019s] Invoking command in '/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim -- -j12 -l12
+[0.117s] [ 75%] Built target rsp_launch
+[0.117s] [ 75%] [32mBuilding CXX object CMakeFiles/launch_sim.dir/src/launch_sim.cpp.o[0m
+[0.460s] [01m[K/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim/src/launch_sim.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[0.460s] [01m[K/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim/src/launch_sim.cpp:122:15:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kchar* const*[m[K’
+[0.460s]   122 |         [01;31m[Kexecvp("gz", {[m[K
+[0.460s]       |         [01;31m[K~~~~~~^~~~~~~~[m[K
+[0.460s]       |               [01;31m[K|[m[K
+[0.461s]       |               [01;31m[K<brace-enclosed initializer list>[m[K
+[0.461s]   123 | [01;31m[K            "gz",[m[K
+[0.461s]       |             [01;31m[K~~~~~[m[K
+[0.461s]   124 | [01;31m[K            "sim",[m[K
+[0.461s]       |             [01;31m[K~~~~~~[m[K
+[0.461s]   125 | [01;31m[K            "-r",[m[K
+[0.461s]       |             [01;31m[K~~~~~[m[K
+[0.461s]   126 | [01;31m[K            "-v4",[m[K
+[0.461s]       |             [01;31m[K~~~~~~[m[K
+[0.461s]   127 | [01;31m[K            world[m[K
+[0.461s]       |             [01;31m[K~~~~~[m[K
+[0.461s]   128 | [01;31m[K        })[m[K;
+[0.461s]       |         [01;31m[K~~[m[K     
+[0.461s] In file included from [01m[K/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim/src/launch_sim.cpp:12[m[K:
+[0.461s] [01m[K/usr/include/unistd.h:599:52:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kint[01;32m[K execvp[m[K(const char*, char* const*)[m[K’
+[0.461s]   599 | extern int execvp (const char *__file, [01;36m[Kchar *const __argv[][m[K)
+[0.461s]       |                                        [01;36m[K~~~~~~~~~~~~^~~~~~~~[m[K
+[0.463s] [01m[K/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim/src/launch_sim.cpp:188:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kgazebo_pid[m[K’ was not declared in this scope
+[0.463s]   188 |         const int gazebo_status = wait_for_process([01;31m[Kgazebo_pid[m[K);
+[0.463s]       |                                                    [01;31m[K^~~~~~~~~~[m[K
+[0.504s] gmake[2]: *** [CMakeFiles/launch_sim.dir/build.make:76: CMakeFiles/launch_sim.dir/src/launch_sim.cpp.o] Error 1
+[0.505s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/launch_sim.dir/all] Error 2
+[0.505s] gmake: *** [Makefile:146: all] Error 2
+[0.507s] Invoked command in '/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim -- -j12 -l12

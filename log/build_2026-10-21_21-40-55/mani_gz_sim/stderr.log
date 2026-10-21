@@ -1,0 +1,3 @@
+[0mCMake Error: Cannot determine link language for target "ros_gz_sim_launch".[0m
+[0mCMake Error: CMake can not determine linker language for target: ros_gz_sim_launch[0m
+[0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m

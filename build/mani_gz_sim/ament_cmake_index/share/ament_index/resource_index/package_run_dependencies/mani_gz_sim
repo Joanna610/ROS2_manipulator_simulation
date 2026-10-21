@@ -1,1 +1,1 @@
-ament_index_cpp;ros_gz_sim;ros_gz_bridge;robot_state_publisher;xacro;ament_lint_auto;ament_lint_common
+ament_index_cpp;launch;launch_ros;ros_gz_sim;ros_gz_bridge;xacro;ament_lint_auto;ament_lint_common

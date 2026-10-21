@@ -63,8 +63,7 @@ CMAKE_BINARY_DIR = /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_g
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/launch_sim.dir/all
-all: CMakeFiles/rsp_launch.dir/all
+all:
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -74,8 +73,6 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/mani_gz_sim_uninstall.dir/clean
-clean: CMakeFiles/launch_sim.dir/clean
-clean: CMakeFiles/rsp_launch.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -129,58 +126,6 @@ mani_gz_sim_uninstall: CMakeFiles/mani_gz_sim_uninstall.dir/rule
 CMakeFiles/mani_gz_sim_uninstall.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mani_gz_sim_uninstall.dir/build.make CMakeFiles/mani_gz_sim_uninstall.dir/clean
 .PHONY : CMakeFiles/mani_gz_sim_uninstall.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/launch_sim.dir
-
-# All Build rule for target.
-CMakeFiles/launch_sim.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/launch_sim.dir/build.make CMakeFiles/launch_sim.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/launch_sim.dir/build.make CMakeFiles/launch_sim.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/CMakeFiles --progress-num=1,2 "Built target launch_sim"
-.PHONY : CMakeFiles/launch_sim.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/launch_sim.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/launch_sim.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/CMakeFiles 0
-.PHONY : CMakeFiles/launch_sim.dir/rule
-
-# Convenience name for target.
-launch_sim: CMakeFiles/launch_sim.dir/rule
-.PHONY : launch_sim
-
-# clean rule for target.
-CMakeFiles/launch_sim.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/launch_sim.dir/build.make CMakeFiles/launch_sim.dir/clean
-.PHONY : CMakeFiles/launch_sim.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/rsp_launch.dir
-
-# All Build rule for target.
-CMakeFiles/rsp_launch.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rsp_launch.dir/build.make CMakeFiles/rsp_launch.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rsp_launch.dir/build.make CMakeFiles/rsp_launch.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/CMakeFiles --progress-num=3,4 "Built target rsp_launch"
-.PHONY : CMakeFiles/rsp_launch.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/rsp_launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rsp_launch.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/CMakeFiles 0
-.PHONY : CMakeFiles/rsp_launch.dir/rule
-
-# Convenience name for target.
-rsp_launch: CMakeFiles/rsp_launch.dir/rule
-.PHONY : rsp_launch
-
-# clean rule for target.
-CMakeFiles/rsp_launch.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rsp_launch.dir/build.make CMakeFiles/rsp_launch.dir/clean
-.PHONY : CMakeFiles/rsp_launch.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

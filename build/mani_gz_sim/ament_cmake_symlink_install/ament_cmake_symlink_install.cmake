@@ -310,11 +310,8 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "launch_sim" "rsp_launch" "DESTINATION" "lib/mani_gz_sim")
-include("/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
-
-# install(DIRECTORY "world" "description" "DESTINATION" "share/mani_gz_sim")
-ament_cmake_symlink_install_directory("/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim" DIRECTORY "world" "description" "DESTINATION" "share/mani_gz_sim")
+# install(DIRECTORY "launch" "config" "world" "description" "DESTINATION" "share/mani_gz_sim")
+ament_cmake_symlink_install_directory("/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim" DIRECTORY "launch" "config" "world" "description" "DESTINATION" "share/mani_gz_sim")
 
 # install(FILES "/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/mani_gz_sim" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim" FILES "/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/mani_gz_sim" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

@@ -1,7 +1,5 @@
 /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/CMakeFiles/uninstall.dir
 /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/CMakeFiles/mani_gz_sim_uninstall.dir
-/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/CMakeFiles/launch_sim.dir
-/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/CMakeFiles/rsp_launch.dir
 /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/CMakeFiles/test.dir
 /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/CMakeFiles/edit_cache.dir
 /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/CMakeFiles/rebuild_cache.dir
