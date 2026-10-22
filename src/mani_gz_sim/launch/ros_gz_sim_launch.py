@@ -3,20 +3,15 @@
 # https://github.com/joshnewans/articubot_one/commit/e8a355fe8eb52c5a40a5240347bc204350a61266
 
 import os
+
 from ament_index_python.packages import get_package_share_directory
 
-from pathlib import Path
-
 from launch import LaunchDescription
-from launch.actions import RegisterEventHandler, IncludeLaunchDescription, SetEnvironmentVariable, DeclareLaunchArgument, ExecuteProcess
+from launch.actions import IncludeLaunchDescription, SetEnvironmentVariable, DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.event_handlers import OnProcessExit
 
 from launch_ros.actions import Node
-
-import xacro
-
 
 def generate_launch_description():
 
@@ -26,7 +21,7 @@ def generate_launch_description():
 
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory(package_name),'launch','rsp_launch.py'
+                    get_package_share_directory(package_name),'launch','mani_launch.py'
                 )]), launch_arguments={'use_sim_time': 'true'}.items()
     )
 

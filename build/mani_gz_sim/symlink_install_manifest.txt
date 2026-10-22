@@ -1,7 +1,8 @@
+/home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/launch/mani_launch.py
 /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/launch/ros_gz_sim_launch.py
-/home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/launch/rsp_launch.py
 /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/config/ros_gz_bridge.yaml
 /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/world/world.world
+/home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/description/colors.xacro
 /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/description/gazebo_control.xacro
 /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/description/inertial_macros.xacro
 /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/description/lidar.xacro
