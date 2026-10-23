@@ -1,0 +1,36 @@
+[0.007s] Invoking command in '/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim -DCMAKE_INSTALL_PREFIX=/home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim
+[0.148s] -- The C compiler identification is GNU 13.3.0
+[0.276s] -- The CXX compiler identification is GNU 13.3.0
+[0.304s] -- Detecting C compiler ABI info
+[0.447s] -- Detecting C compiler ABI info - done
+[0.463s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.465s] -- Detecting C compile features
+[0.466s] -- Detecting C compile features - done
+[0.481s] -- Detecting CXX compiler ABI info
+[0.625s] -- Detecting CXX compiler ABI info - done
+[0.644s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.644s] -- Detecting CXX compile features
+[0.645s] -- Detecting CXX compile features - done
+[0.653s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.847s] -- Found Python3: /home/joanna/anaconda3/bin/python3 (found version "3.12.2") found components: Interpreter 
+[1.000s] -- Found ament_index_cpp: 1.8.1 (/opt/ros/jazzy/share/ament_index_cpp/cmake)
+[1.007s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.130s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.130s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.132s] -- Added test 'lint_cmake' to check CMake code style
+[1.133s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.136s] -- Added test 'xmllint' to check XML markup files
+[1.138s] -- Configuring done (1.1s)
+[1.142s] -- Generating done (0.0s)
+[1.145s] -- Build files have been written to: /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim
+[1.151s] Invoked command in '/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim -DCMAKE_INSTALL_PREFIX=/home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim
+[1.154s] Invoking command in '/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim -- -j12 -l12
+[1.206s] Invoked command in '/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim -- -j12 -l12
+[1.221s] Invoking command in '/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim
+[1.232s] -- Install configuration: ""
+[1.232s] -- Up-to-date: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/launch
+[1.232s] -- Up-to-date: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/config
+[1.232s] -- Up-to-date: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/world
+[1.232s] -- Up-to-date: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/description
+[1.232s] -- Installing: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/package.dsv
+[1.235s] Invoked command in '/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim

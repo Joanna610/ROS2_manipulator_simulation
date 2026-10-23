@@ -43,7 +43,71 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mani_gz_sim" TYPE DIRECTORY FILES
+    "/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim/launch"
+    "/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim/config"
+    "/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim/world"
+    "/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim/description"
+    )
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/mani_gz_sim")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/mani_gz_sim")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mani_gz_sim/environment" TYPE FILE FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mani_gz_sim/environment" TYPE FILE FILES "/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mani_gz_sim/environment" TYPE FILE FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mani_gz_sim/environment" TYPE FILE FILES "/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/ament_cmake_environment_hooks/path.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mani_gz_sim" TYPE FILE FILES "/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/ament_cmake_environment_hooks/local_setup.bash")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mani_gz_sim" TYPE FILE FILES "/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/ament_cmake_environment_hooks/local_setup.sh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mani_gz_sim" TYPE FILE FILES "/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/ament_cmake_environment_hooks/local_setup.zsh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mani_gz_sim" TYPE FILE FILES "/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/ament_cmake_environment_hooks/local_setup.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mani_gz_sim" TYPE FILE FILES "/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/ament_cmake_environment_hooks/package.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/ament_cmake_index/share/ament_index/resource_index/packages/mani_gz_sim")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mani_gz_sim/cmake" TYPE FILE FILES
+    "/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/ament_cmake_core/mani_gz_simConfig.cmake"
+    "/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/ament_cmake_core/mani_gz_simConfig-version.cmake"
+    )
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mani_gz_sim" TYPE FILE FILES "/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/mani_gz_sim/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

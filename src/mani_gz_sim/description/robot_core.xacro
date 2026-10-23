@@ -9,58 +9,97 @@
         <visual>
             <origin xyz="0 0 0"/>
             <geometry>
-                <cylinder radius="0.3" length="0.1"/>
-            </geometry>
-            <material name="black"/>
-        </visual>
-        <visual>
-            <origin xyz="0 0 0"/>
-            <geometry>
-                <cylinder radius="0.3" length="0.1"/>
+                <cylinder radius="0.5" length="0.1"/>
             </geometry>
             <material name="black"/>
         </visual>
         <collision>
             <origin xyz="0 0 0"/>
             <geometry>
-                <cylinder radius="0.3" length="0.1"/>
+                <cylinder radius="0.5" length="0.1"/>
             </geometry>
         </collision>
-        <xacro:inertial_cylinder mass="0.5" radius="0.3" length="0.1">
+        <xacro:inertial_cylinder mass="0.5" radius="0.5" length="0.1">
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
 
 
-    <joint name="base_link_2" type="fixed">
+    <joint name="joint_1" type="fixed">
         <parent link="base_link"/>
-        <child link="chassis"/>
+        <child link="platform"/>
         <origin xyz="0 0 0"/>
     </joint>
     
-    <link name="chassis">
+    <link name="platform">
         <visual>
-            <origin xyz="0 0 0.1"/>
+            <origin xyz="0 0 0.2"/>
             <geometry>
-                <cylinder radius="0.25" length="0.5"/>
-            </geometry>
-            <material name="blue"/>
-        </visual>
-        <visual>
-            <origin xyz="0 0 0.1"/>
-            <geometry>
-                <cylinder radius="0.25" length="0.5"/>
+                <cylinder radius="0.45" length="0.3"/>
             </geometry>
             <material name="blue"/>
         </visual>
         <collision>
-            <origin xyz="0 0 0.1"/>
+            <origin xyz="0 0 0.2"/>
             <geometry>
-                <cylinder radius="0.25" length="0.5"/>
+                <cylinder radius="0.45" length="0.3"/>
             </geometry>
         </collision>
-        <xacro:inertial_cylinder mass="0.5" radius="0.25" length="0.5">
-            <origin xyz="0 0 0" rpy="0 0 0"/>
+        <xacro:inertial_cylinder mass="0.5" radius="0.45" length="0.3">
+            <origin xyz="0 0 0.2" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+
+
+    <joint name="joint_2" type="fixed">
+        <parent link="platform"/>
+        <child link="circuit_joint"/>
+        <origin xyz="0 0 0"/>
+    </joint>
+    
+    <link name="circuit_joint">
+        <visual>
+            <origin xyz="0 0 0.35" rpy="0 1.5708 0"/>
+            <geometry>
+                <cylinder radius="0.3" length="0.45"/>
+            </geometry>
+            <material name="purple"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.35" rpy="0 1.5708 0"/>
+            <geometry>
+                <cylinder radius="0.3" length="0.45"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="0.5" radius="0.3" length="0.45">
+            <origin xyz="0 0 0.35" rpy="0 1.5708 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+
+    <joint name="joint_3" type="fixed">
+        <parent link="circuit_joint"/>
+        <child link="arm_1"/>
+        <origin xyz="0 0 0"/>
+    </joint>
+
+    <link name="arm_1">
+        <visual>
+            <origin xyz="0 0 1.1"/>
+            <geometry>
+                <cylinder radius="0.2" length="1.1"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 1.1"/>
+            <geometry>
+                <cylinder radius="0.2" length="1.1"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="0.5" radius="0.2" length="1.1">
+            <origin xyz="0 0 1.1"/>
         </xacro:inertial_cylinder>
     </link>
 

@@ -1,0 +1,10 @@
+[0.008s] Invoking command in '/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim -- -j12 -l12
+[0.052s] Invoked command in '/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim -- -j12 -l12
+[0.065s] Invoking command in '/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim
+[0.077s] -- Install configuration: ""
+[0.077s] -- Up-to-date: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/launch
+[0.077s] -- Up-to-date: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/config
+[0.077s] -- Up-to-date: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/world
+[0.077s] -- Up-to-date: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/description
+[0.078s] -- Installing: /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/mani_gz_sim/share/mani_gz_sim/package.dsv
+[0.079s] Invoked command in '/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim
