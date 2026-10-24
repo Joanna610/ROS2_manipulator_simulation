@@ -197,6 +197,43 @@ mani_gz_sim_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mani_gz_sim_uninstall.dir/build.make CMakeFiles/mani_gz_sim_uninstall.dir/build
 .PHONY : mani_gz_sim_uninstall/fast
 
+#=============================================================================
+# Target rules for targets named move_joint
+
+# Build rule for target.
+move_joint: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 move_joint
+.PHONY : move_joint
+
+# fast build rule for target.
+move_joint/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/move_joint.dir/build.make CMakeFiles/move_joint.dir/build
+.PHONY : move_joint/fast
+
+src/move_joint.o: src/move_joint.cpp.o
+.PHONY : src/move_joint.o
+
+# target to build an object file
+src/move_joint.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/move_joint.dir/build.make CMakeFiles/move_joint.dir/src/move_joint.cpp.o
+.PHONY : src/move_joint.cpp.o
+
+src/move_joint.i: src/move_joint.cpp.i
+.PHONY : src/move_joint.i
+
+# target to preprocess a source file
+src/move_joint.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/move_joint.dir/build.make CMakeFiles/move_joint.dir/src/move_joint.cpp.i
+.PHONY : src/move_joint.cpp.i
+
+src/move_joint.s: src/move_joint.cpp.s
+.PHONY : src/move_joint.s
+
+# target to generate assembly for a file
+src/move_joint.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/move_joint.dir/build.make CMakeFiles/move_joint.dir/src/move_joint.cpp.s
+.PHONY : src/move_joint.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +249,10 @@ help:
 	@echo "... test"
 	@echo "... mani_gz_sim_uninstall"
 	@echo "... uninstall"
+	@echo "... move_joint"
+	@echo "... src/move_joint.o"
+	@echo "... src/move_joint.i"
+	@echo "... src/move_joint.s"
 .PHONY : help
 
 

@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_g
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: CMakeFiles/move_joint.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,6 +73,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/mani_gz_sim_uninstall.dir/clean
+clean: CMakeFiles/move_joint.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -126,6 +127,32 @@ mani_gz_sim_uninstall: CMakeFiles/mani_gz_sim_uninstall.dir/rule
 CMakeFiles/mani_gz_sim_uninstall.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mani_gz_sim_uninstall.dir/build.make CMakeFiles/mani_gz_sim_uninstall.dir/clean
 .PHONY : CMakeFiles/mani_gz_sim_uninstall.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/move_joint.dir
+
+# All Build rule for target.
+CMakeFiles/move_joint.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/move_joint.dir/build.make CMakeFiles/move_joint.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/move_joint.dir/build.make CMakeFiles/move_joint.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/CMakeFiles --progress-num=1,2 "Built target move_joint"
+.PHONY : CMakeFiles/move_joint.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/move_joint.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/move_joint.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/mani_gz_sim/CMakeFiles 0
+.PHONY : CMakeFiles/move_joint.dir/rule
+
+# Convenience name for target.
+move_joint: CMakeFiles/move_joint.dir/rule
+.PHONY : move_joint
+
+# clean rule for target.
+CMakeFiles/move_joint.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/move_joint.dir/build.make CMakeFiles/move_joint.dir/clean
+.PHONY : CMakeFiles/move_joint.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

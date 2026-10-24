@@ -20,6 +20,9 @@
   <exec_depend>ros_gz_bridge</exec_depend>
   <exec_depend>xacro</exec_depend>
 
+  <depend>rclcpp</depend>
+  <depend>trajectory_msgs</depend>
+
   <!-- Testing and linting -->
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

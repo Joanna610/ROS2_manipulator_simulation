@@ -1,1 +1,1 @@
-ament_index_cpp:launch:launch_ros:ros_gz_bridge:ros_gz_sim:xacro
+ament_index_cpp:launch:launch_ros:rclcpp:ros_gz_bridge:ros_gz_sim:trajectory_msgs:xacro

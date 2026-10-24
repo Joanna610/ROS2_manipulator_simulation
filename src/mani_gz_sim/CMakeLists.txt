@@ -5,13 +5,22 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-# find dependencies
 find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
 find_package(ament_index_cpp REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(trajectory_msgs REQUIRED)
 
+add_executable(move_joint src/move_joint.cpp)
+
+ament_target_dependencies(move_joint
+  rclcpp
+  trajectory_msgs
+)
+
+install(
+  TARGETS move_joint
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 install(
   DIRECTORY launch config world description
