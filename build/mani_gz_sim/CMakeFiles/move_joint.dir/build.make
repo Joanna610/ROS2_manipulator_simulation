@@ -165,7 +165,7 @@ move_joint: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtp
 move_joint: /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_cpp.so
 move_joint: /opt/ros/jazzy/lib/librmw.so
 move_joint: /opt/ros/jazzy/lib/librosidl_dynamic_typesupport.so
-move_joint: /opt/ros/jazzy/lib/libfastcdr.so.2.2.5
+move_joint: /opt/ros/jazzy/lib/libfastcdr.so.2.2.8
 move_joint: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
 move_joint: /opt/ros/jazzy/lib/librosidl_typesupport_introspection_cpp.so
 move_joint: /opt/ros/jazzy/lib/librosidl_typesupport_introspection_c.so
