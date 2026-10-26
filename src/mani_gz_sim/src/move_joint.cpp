@@ -13,11 +13,8 @@ public:
     MoveJoint()
     : Node("move_joint"), command_sent_(false)
     {
-        publisher_ = this->create_publisher<trajectory_msgs::msg::JointTrajectory>(
-                "/joint_trajectory_controller/joint_trajectory", 10);
-
-        timer_ = this->create_wall_timer(500ms,
-            std::bind(&MoveJoint::send_command, this));
+        publisher_ = this->create_publisher<trajectory_msgs::msg::JointTrajectory>("/joint_trajectory_controller/joint_trajectory", 10);
+        timer_ = this->create_wall_timer(500ms, std::bind(&MoveJoint::send_command, this));
 
         RCLCPP_INFO(
             this->get_logger(),
@@ -50,7 +47,7 @@ private:
 
         // Target positions in radians:
         // joint_1 = 90 degrees; joint_2 = 0 degrees.
-        point.positions = {1.5708, 0.0};
+        point.positions = {0.0, 1};
 
         // Request the target position in 3 seconds.
         point.time_from_start.sec = 3;
@@ -68,9 +65,7 @@ private:
         timer_->cancel();
     }
 
-    rclcpp::Publisher<
-        trajectory_msgs::msg::JointTrajectory>::SharedPtr publisher_;
-
+    rclcpp::Publisher<trajectory_msgs::msg::JointTrajectory>::SharedPtr publisher_;
     rclcpp::TimerBase::SharedPtr timer_;
 
     bool command_sent_;

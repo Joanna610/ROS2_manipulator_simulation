@@ -7,9 +7,10 @@ import os
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, SetEnvironmentVariable, DeclareLaunchArgument
+from launch.actions import IncludeLaunchDescription, SetEnvironmentVariable, DeclareLaunchArgument, RegisterEventHandler
 from launch.substitutions import LaunchConfiguration
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.event_handlers import OnProcessExit
 
 from launch_ros.actions import Node
 
@@ -66,6 +67,35 @@ def generate_launch_description():
         output='screen'
     )
 
+    joint_state_broadcaster_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=[
+            "joint_state_broadcaster",
+            "--controller-manager",
+            "/controller_manager",
+        ],
+        output="screen",
+    )
+
+    joint_trajectory_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=[
+            "joint_trajectory_controller",
+            "--controller-manager",
+            "/controller_manager",
+        ],
+        output="screen",
+    )
+
+    start_trajectory_controller = RegisterEventHandler(
+        event_handler=OnProcessExit(
+            target_action=joint_state_broadcaster_spawner,
+            on_exit=[joint_trajectory_controller_spawner],
+        )
+    )
+
     return LaunchDescription([
         set_qt_variable,
         rsp,
@@ -73,4 +103,6 @@ def generate_launch_description():
         gazebo,
         spawn_entity,
         ros_gz_bridge,
+        joint_state_broadcaster_spawner,
+        start_trajectory_controller,
     ])
