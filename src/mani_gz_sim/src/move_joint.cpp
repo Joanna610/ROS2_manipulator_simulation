@@ -41,13 +41,12 @@ private:
         trajectory_msgs::msg::JointTrajectory trajectory;
 
         // Joint positions must follow the same order as joint_names.
-        trajectory.joint_names = {"joint_1", "joint_2"};
+        trajectory.joint_names = {"platform_joint", "arm_joint_1", "arm_joint_2", "arm_joint_3"};
 
         trajectory_msgs::msg::JointTrajectoryPoint point;
 
         // Target positions in radians:
-        // joint_1 = 90 degrees; joint_2 = 0 degrees.
-        point.positions = {0.0, 1};
+        point.positions = {0.0, 0.0, 1.5708, 1.5708};
 
         // Request the target position in 3 seconds.
         point.time_from_start.sec = 3;

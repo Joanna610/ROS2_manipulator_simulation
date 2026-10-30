@@ -11,8 +11,10 @@ controller_manager:
 joint_trajectory_controller:
   ros__parameters:
     joints:
-      - joint_1
-      - joint_2
+      - platform_joint
+      - arm_joint_1
+      - arm_joint_2
+      - arm_joint_3
 
     command_interfaces:
       - position
