@@ -1,0 +1,1 @@
+/home/joanna/ros2_ws/ROS2_manipulator_simulation/src/AttachablePlugin/attachable_plugin_demos/launch/arm_robot_demo.launch.py

@@ -1,0 +1,1 @@
+/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/attachable_joint_plugin/ament_cmake_core/attachable_joint_pluginConfig.cmake

@@ -1,5 +1,11 @@
-ć<sdf version="1.6">
+<sdf version="1.6">
   <world name="empty">
+
+    <plugin filename="libattachable_joint_plugin.so"
+          name="attachable_joint::AttachableJoint">
+      <attachtopic>/attach</attachtopic>
+    </plugin>
+
     <physics name="1ms" type="ignored">
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1.0</real_time_factor>

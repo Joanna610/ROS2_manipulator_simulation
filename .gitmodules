@@ -1,0 +1,3 @@
+[submodule "src/AttachablePlugin"]
+	path = src/AttachablePlugin
+	url = https://github.com/akinami3/AttachablePlugin.git

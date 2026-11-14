@@ -1,0 +1,39 @@
+running develop
+running egg_info
+creating attachable_plugin_demos.egg-info
+writing attachable_plugin_demos.egg-info/PKG-INFO
+writing dependency_links to attachable_plugin_demos.egg-info/dependency_links.txt
+writing entry points to attachable_plugin_demos.egg-info/entry_points.txt
+writing requirements to attachable_plugin_demos.egg-info/requires.txt
+writing top-level names to attachable_plugin_demos.egg-info/top_level.txt
+writing manifest file 'attachable_plugin_demos.egg-info/SOURCES.txt'
+reading manifest file 'attachable_plugin_demos.egg-info/SOURCES.txt'
+writing manifest file 'attachable_plugin_demos.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/lib/python3.12/site-packages/attachable-plugin-demos.egg-link (link to .)
+Installing arm_joint_teleop script to /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/lib/attachable_plugin_demos
+Installing attach_contact_link script to /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/lib/attachable_plugin_demos
+
+Installed /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/attachable_plugin_demos
+running symlink_data
+creating /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/ament_index
+creating /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/ament_index/resource_index
+creating /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/ament_index/resource_index/packages
+symbolically linking /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/attachable_plugin_demos/resource/attachable_plugin_demos -> /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/ament_index/resource_index/packages
+symbolically linking /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/attachable_plugin_demos/package.xml -> /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/attachable_plugin_demos
+creating /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/attachable_plugin_demos/launch
+symbolically linking /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/attachable_plugin_demos/launch/arm_robot_demo.launch.py -> /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/attachable_plugin_demos/launch/
+symbolically linking /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/attachable_plugin_demos/launch/mobile_robot_demo.launch.py -> /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/attachable_plugin_demos/launch/
+symbolically linking /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/attachable_plugin_demos/launch/attachable_joint_demo.launch.py -> /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/attachable_plugin_demos/launch/
+creating /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/attachable_plugin_demos/urdf
+symbolically linking /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/attachable_plugin_demos/urdf/simple_6d_arm.urdf.xacro -> /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/attachable_plugin_demos/urdf/
+symbolically linking /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/attachable_plugin_demos/urdf/simple_mobile_robot.urdf.xacro -> /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/attachable_plugin_demos/urdf/
+symbolically linking /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/attachable_plugin_demos/urdf/shelf.urdf.xacro -> /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/attachable_plugin_demos/urdf/
+creating /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/attachable_plugin_demos/config
+symbolically linking /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/attachable_plugin_demos/config/mobile_robot_demo.yaml -> /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/attachable_plugin_demos/config/
+symbolically linking /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/attachable_plugin_demos/config/mobile_robot_bridge.yaml -> /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/attachable_plugin_demos/config/
+symbolically linking /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/attachable_plugin_demos/config/simple_6d_arm_bridge.yaml -> /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/attachable_plugin_demos/config/
+creating /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/attachable_plugin_demos/world
+symbolically linking /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/attachable_plugin_demos/world/mobile_robot_demo.world -> /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/attachable_plugin_demos/world/
+symbolically linking /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/attachable_plugin_demos/world/arm_robot_demo.world -> /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/attachable_plugin_demos/world/
+symbolically linking /home/joanna/ros2_ws/ROS2_manipulator_simulation/build/attachable_plugin_demos/world/attachable_joint_demo.world -> /home/joanna/ros2_ws/ROS2_manipulator_simulation/install/attachable_plugin_demos/share/attachable_plugin_demos/world/
