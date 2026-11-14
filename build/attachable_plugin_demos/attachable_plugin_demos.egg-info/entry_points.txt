@@ -1,3 +1,0 @@
-[console_scripts]
-arm_joint_teleop = attachable_plugin_demos.arm_joint_teleop:main
-attach_contact_link = attachable_plugin_demos.attach_contact_link:main

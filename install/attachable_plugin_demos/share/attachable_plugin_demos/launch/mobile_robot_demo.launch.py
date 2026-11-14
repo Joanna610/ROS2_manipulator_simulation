@@ -1,1 +1,0 @@
-/home/joanna/ros2_ws/ROS2_manipulator_simulation/build/attachable_plugin_demos/launch/mobile_robot_demo.launch.py

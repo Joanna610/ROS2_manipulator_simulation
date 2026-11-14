@@ -1,9 +1,0 @@
-source;share/attachable_plugin_demos/hook/pythonpath.ps1
-source;share/attachable_plugin_demos/hook/pythonpath.dsv
-source;share/attachable_plugin_demos/hook/pythonpath.sh
-source;share/attachable_plugin_demos/hook/ament_prefix_path.ps1
-source;share/attachable_plugin_demos/hook/ament_prefix_path.dsv
-source;share/attachable_plugin_demos/hook/ament_prefix_path.sh
-source;../../build/attachable_plugin_demos/share/attachable_plugin_demos/hook/pythonpath_develop.ps1
-source;../../build/attachable_plugin_demos/share/attachable_plugin_demos/hook/pythonpath_develop.dsv
-source;../../build/attachable_plugin_demos/share/attachable_plugin_demos/hook/pythonpath_develop.sh
