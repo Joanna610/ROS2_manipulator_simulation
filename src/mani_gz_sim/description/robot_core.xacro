@@ -255,4 +255,31 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
+
+
+    <!-- =========== CAMERA =========== -->
+    <joint name="arm_joint_5_fixed" type="fixed">
+        <parent link="arm_3"/>
+        <child link="camera_link"/>
+        <origin xyz="0 0.2 ${arm_3_length/2}"/>
+    </joint>
+
+    <link name="camera_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.1"  x="0.1" y="0.1" z="0.1">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
 </robot>
