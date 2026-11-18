@@ -96,6 +96,29 @@ def generate_launch_description():
         )
     )
 
+    box_file = os.path.join(get_package_share_directory(package_name), 'description', 'box.sdf')
+
+    spawn_box = Node(
+        package='ros_gz_sim',
+        executable='create',
+        arguments=[
+            '-world', 'empty',
+            '-file', box_file,
+            '-name', 'box',
+            '-x', '5.0',
+            '-y', '0.0',
+            '-z', '0.0'
+        ],
+        output='screen'
+    )
+
+    spawn_box_after_robot = RegisterEventHandler(
+        OnProcessExit(
+            target_action=ros_gz_bridge,
+            on_exit=[spawn_box]
+        )
+    )
+
     return LaunchDescription([
         set_qt_variable,
         rsp,
@@ -105,4 +128,6 @@ def generate_launch_description():
         ros_gz_bridge,
         joint_state_broadcaster_spawner,
         start_trajectory_controller,
+        spawn_box,
+        spawn_box_after_robot,
     ])
